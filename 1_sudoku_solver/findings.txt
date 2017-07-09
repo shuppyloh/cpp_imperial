@@ -1,0 +1,68 @@
+Summarise your findings here (see specification).
+
+Results from the main.cpp q5 have been pasted below.
+The programme has identified mystery2 as the only board impossible t solve, so we know one of mystery1 and mystery3 is harder to solve than the other.
+
+To define a difficulty level of the boards, we have to use some parameters. While we can use runtime functions to find how long the program will take to solve the board (longer times implies harder puzzles), we can also add some sort of trace to the programme to count how many 'steps' are needed to solve the program.
+
+We add two different traces to the solve function. One to count how many times a digit has been increased within each cell and summing across all cells (trace_i), and one to count how many times the programme backtracks to a previous cell (trace_b).
+
+Mystery1 has nearly 30 times more incremental steps than Mystery3 (421,488 vs 14,076) and 30 times more backtrace steps (3,793,629 vs 126,897).
+
+Hence we define Mystery1 to be the harder puzzle of 'extremely difficult', and Mystery3 to be the puzzle of 'difficult'.
+
+====================== Question 5 ======================
+
+Loading Sudoku board from file 'mystery1.dat'... Success!
+The 'mystery1' board has a solution:
+    1   2   3   4   5   6   7   8   9   
+  +===========+===========+===========+
+A | 8 : 1 : 9 | 7 : 4 : 6 | 2 : 5 : 3 |
+  +---+---+---+---+---+---+---+---+---+
+B | 5 : 2 : 3 | 8 : 1 : 9 | 4 : 6 : 7 |
+  +---+---+---+---+---+---+---+---+---+
+C | 7 : 6 : 4 | 2 : 3 : 5 | 1 : 8 : 9 |
+  +===========+===========+===========+
+D | 6 : 5 : 8 | 9 : 7 : 1 | 3 : 4 : 2 |
+  +---+---+---+---+---+---+---+---+---+
+E | 4 : 7 : 2 | 5 : 6 : 3 | 9 : 1 : 8 |
+  +---+---+---+---+---+---+---+---+---+
+F | 9 : 3 : 1 | 4 : 8 : 2 | 6 : 7 : 5 |
+  +===========+===========+===========+
+G | 1 : 8 : 6 | 3 : 2 : 7 | 5 : 9 : 4 |
+  +---+---+---+---+---+---+---+---+---+
+H | 3 : 9 : 7 | 6 : 5 : 4 | 8 : 2 : 1 |
+  +---+---+---+---+---+---+---+---+---+
+I | 2 : 4 : 5 | 1 : 9 : 8 | 7 : 3 : 6 |
+  +===========+===========+===========+
+Number of backtrace steps that were used: 421488
+Number of incremental steps that were used: 3793629
+
+Loading Sudoku board from file 'mystery2.dat'... Success!
+A solution cannot be found.
+
+Loading Sudoku board from file 'mystery3.dat'... Success!
+The 'mystery3' board has a solution:
+    1   2   3   4   5   6   7   8   9   
+  +===========+===========+===========+
+A | 9 : 1 : 4 | 8 : 7 : 3 | 5 : 6 : 2 |
+  +---+---+---+---+---+---+---+---+---+
+B | 6 : 2 : 8 | 5 : 1 : 4 | 3 : 7 : 9 |
+  +---+---+---+---+---+---+---+---+---+
+C | 7 : 3 : 5 | 6 : 2 : 9 | 1 : 4 : 8 |
+  +===========+===========+===========+
+D | 3 : 6 : 7 | 1 : 8 : 5 | 2 : 9 : 4 |
+  +---+---+---+---+---+---+---+---+---+
+E | 5 : 8 : 1 | 4 : 9 : 2 | 7 : 3 : 6 |
+  +---+---+---+---+---+---+---+---+---+
+F | 4 : 9 : 2 | 7 : 3 : 6 | 8 : 5 : 1 |
+  +===========+===========+===========+
+G | 8 : 4 : 9 | 2 : 5 : 7 | 6 : 1 : 3 |
+  +---+---+---+---+---+---+---+---+---+
+H | 1 : 5 : 3 | 9 : 6 : 8 | 4 : 2 : 7 |
+  +---+---+---+---+---+---+---+---+---+
+I | 2 : 7 : 6 | 3 : 4 : 1 | 9 : 8 : 5 |
+  +===========+===========+===========+
+Number of backtrace steps that were used: 14076
+Number of incremental steps that were used: 126897
+

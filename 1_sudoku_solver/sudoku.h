@@ -1,0 +1,10 @@
+void load_board(const char* filename, char board[9][9]);
+void display_board(const char board[9][9]);
+bool is_complete(const char board [9][9]);
+bool make_move(const char position[2], int digit, char board [9][9]);
+bool save_board(const char* filename, const char board[9][9]);
+bool check_row(const char move[2], int digit, const char board[9][9]);
+bool check_col(const char move[2], int digit, const char board[9][9]);
+bool check_9cellgrid(const char move[2], int digit, const char board[9][9]);
+bool solve_board(char board[9][9]);
+bool solve_board_trace(char board[9][9], long int &trace_b, long int &trace_i);
